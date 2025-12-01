@@ -1,0 +1,492 @@
+/* IMPORT FONTS (Genshin-like + clean UI) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #00f5ff, #00111a);
+    color: #e6ffff;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+    padding-top: 70px;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 20, 40, 0.7);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    /* neon glow */
+    box-shadow: 0 0 12px #00eaff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    font-family: "Cinzel", serif;
+    font-size: 1.2rem;
+    color: #bffcff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+
+    /* neon glow */
+    text-shadow: 0 0 10px #00eaff;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #00eaff;
+    color: #00121e;
+    box-shadow: 0 0 15px #00eaff, 0 0 30px #00f7ff;
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    padding: 120px 20px 80px;
+    text-align: center;
+
+    background: linear-gradient(180deg, #001f3f, #000b18);
+    box-shadow: 0 0 20px #00eaff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-family: "Cinzel", serif;
+    color: #bffcff;
+    text-shadow: 0 0 15px #00eaff, 0 0 25px #009dff;
+}
+
+.hero-content h1 span {
+    color: #00eaff;
+    text-shadow: 0 0 20px #00eaff;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: #c9f7ff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+/* HERO BUTTON */
+.hero-btn {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 12px 25px;
+
+    background: #00eaff;
+    color: #00121e;
+    font-weight: 600;
+
+    border-radius: 12px;
+    box-shadow: 0 0 15px #00eaff, 0 0 30px #00eaff;
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #009dff;
+    color: white;
+    box-shadow: 0 0 25px #00eaff, 0 0 45px #00eaff;
+    transform: translateY(-3px);
+}
+
+/* ABOUT SECTION */
+.about {
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    font-family: "Cinzel", serif;
+    color: #bffcff;
+    text-shadow: 0 0 15px #00eaff;
+    margin-bottom: 30px;
+}
+
+/* About Box */
+.about-box {
+    background: rgba(0, 15, 30, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+.about-box p {
+    font-size: 1.2rem;
+    color: #c9f7ff;
+    line-height: 1.6;
+    text-shadow: 0 0 8px #00eaff;
+    text-align: left;
+}
+
+.about-box .name {
+    color: #00eaff;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+/* SKILLS LIST */
+.skills-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.skills-list li {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #a9e9ff;
+    text-shadow: 0 0 10px #00eaff;
+
+}
+
+
+
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #000000d6;
+    border: 3px solid #00141f;
+    margin: 20px auto;
+    width: 550px;
+    border-radius: 20px;
+
+    /* neon glow */
+    box-shadow: 0 0 15px #00eaff, 
+                0 0 30px #005eff inset;
+}
+
+/* Genshin-style text */
+header h1 {
+    font-family: "Cinzel", serif;
+    font-size: 2.7rem;
+    color: #baf6ff;
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #00f6ff;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #d4ffff;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background: #00040b;
+    color: #cfe7ff;
+}
+
+header.dark-mode {
+    background: #000d3d;
+    border-color: #00b3ff;
+    box-shadow: 0 0 15px #00b3ff, 
+                0 0 25px #004477 inset;
+}
+
+/* DARK MODE TOGGLE BUTTON */
+#darkModeToggle {
+    background: #00eaff;
+    color: #00111a;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    /* glowing button */
+    box-shadow: 0 0 10px #00eaff, 0 0 20px #00d4ff;
+    transition: 0.2s;
+}
+
+#darkModeToggle:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px #ffffff;
+}
+
+/* PROJECT SECTION */
+.projects {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.3rem;
+    font-family: "Cinzel", serif;
+    color: #a6faff;
+    text-shadow: 0 0 15px #00eaff;
+}
+
+/* PROJECT CARDS */
+.project-box {
+    background: #00141f;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 4px solid #00eaff;
+    border-radius: 12px;
+
+   
+    box-shadow: 0 0 15px #00baff;
+    transition: 0.3s;
+}
+
+.project-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px #00eaff, 0 0 40px #00f7ff;
+}
+
+.project-box h3 {
+    color: #aaf6ff;
+    font-family: "Cinzel", serif;
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+.project-box p {
+    color: #d7faff;
+}
+
+.about-me {
+    color: #aaf6ff;
+    font-family: "Cinzel", serif;
+    text-shadow: #00eaff;
+    font-size: 1.4rem;
+    background-color: #00141f;
+    width:800px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+/* WAIFU CARDS SECTION */
+.waifu-marquee-section {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.waifu-marquee-title {
+    font-family: "Cinzel", serif;
+    font-size: 2.2rem;
+    color: rgb(161, 42, 62);
+    text-shadow: 0 0 15px #00eaff, 0 0 30px #00b3ff;
+    margin-bottom: 15px;
+}
+
+.waifu-marquee {
+    width: 90%;
+    max-width: 1000px;
+    height: 320px;          
+    margin: 50px auto;
+    border: 2px solid #00eaff;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(0, 15, 30, 0.8);
+    box-shadow: 0 0 20px #00eaff;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 20px;
+    width: calc((200px + 20px) * 8); /* 8 cards including duplicates */
+    height: 100%;
+    animation: moveRight 20s linear infinite;
+}
+
+.waifu-card {
+    width: 200px;
+    height: 100%; 
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 0 15px #00eaff, 0 0 25px #005eff inset;
+    border: 2px solid #00eaff;
+    background: #00141f;
+    transition: transform 0.3s;
+}
+
+.waifu-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.waifu-card:hover {
+    transform: scale(1.05);
+}
+
+/* Smooth infinite scroll */
+@keyframes moveRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+
+
+/* CONTACT SECTION */
+.contact {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    font-family: "Cinzel", serif;
+    color: #bffcff;
+    text-shadow: 0 0 10px #00eaff;
+    margin-bottom: 25px;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    margin: auto;
+}
+
+.contact-item {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    color: #bffcff;
+    text-decoration: none;
+    border: 2px solid #00eaff;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-shadow: 0 0 8px #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+    transition: 0.3s;
+}
+
+/* Neon hover */
+.contact-item:hover {
+    background: #00eaff;
+    color: #00121e;
+    box-shadow: 0 0 20px #00eaff, 0 0 35px #00eaff;
+    transform: translateY(-3px);
+}
+
+.contact-item i {
+    font-size: 1.4rem;
+}
+
+/* MOBILE FIXES */
+@media screen and (max-width: 768px) {
+
+    /* Navbar stays horizontal but smaller padding */
+    .navbar ul {
+        gap: 20px;
+        flex-wrap: wrap; /* allow wrapping if screen too small */
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+
+    /* Hero section */
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* About box width */
+    .about {
+        width: 95%; /* shrink container */
+        margin: 60px auto;
+    }
+
+    .about-box p, .skills-list li {
+        font-size: 1rem;
+    }
+
+    /* Header */
+    header {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    /* Projects section */
+    .projects {
+        width: 95%;
+    }
+
+    .project-box {
+        padding: 15px;
+    }
+
+    .project-box h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Contact section */
+    .contact-box {
+        width: 95%;
+        flex-direction: column; /* stack contact items vertically */
+        gap: 15px;
+    }
+
+    /* Waifu Marquee */
+    .waifu-marquee {
+        width: 95%;
+        height: 220px; /* shrink height for mobile */
+    }
+
+    .waifu-card {
+        width: 150px; /* shrink cards slightly */
+    }
+
+    .waifu-marquee-title {
+        font-size: 1.8rem;
+    }
+}
