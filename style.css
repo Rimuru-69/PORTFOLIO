@@ -1,4 +1,4 @@
-/* IMPORT FONTS */
+/* IMPORT FONTS (Genshin-like + clean UI) */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
 
 /* RESET */
@@ -14,7 +14,8 @@ body {
     color: #e6ffff;
     min-height: 100vh;
     transition: background 0.3s, color 0.3s;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding-top: 70px;
+    overflow-x: hidden;
 }
 
 /* NAVIGATION BAR */
@@ -27,6 +28,8 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
+
+    /* neon glow */
     box-shadow: 0 0 12px #00eaff;
 }
 
@@ -35,7 +38,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
-    flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
 .navbar a {
@@ -45,6 +47,8 @@ body {
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 10px;
+
+    /* neon glow */
     text-shadow: 0 0 10px #00eaff;
     transition: 0.3s;
 }
@@ -61,6 +65,7 @@ body {
     width: 100%;
     padding: 120px 20px 80px;
     text-align: center;
+
     background: linear-gradient(180deg, #001f3f, #000b18);
     box-shadow: 0 0 20px #00eaff;
 }
@@ -84,15 +89,19 @@ body {
     text-shadow: 0 0 10px #00eaff;
 }
 
+/* HERO BUTTON */
 .hero-btn {
     margin-top: 25px;
     display: inline-block;
     padding: 12px 25px;
+
     background: #00eaff;
     color: #00121e;
     font-weight: 600;
+
     border-radius: 12px;
     box-shadow: 0 0 15px #00eaff, 0 0 30px #00eaff;
+
     text-decoration: none;
     transition: 0.3s;
 }
@@ -107,18 +116,25 @@ body {
 /* ABOUT SECTION */
 .about {
     width: 80%;
-    max-width: 1000px;
     margin: 80px auto;
     text-align: center;
 }
 
+.about h2 {
+    font-size: 2.5rem;
+    font-family: "Cinzel", serif;
+    color: #bffcff;
+    text-shadow: 0 0 15px #00eaff;
+    margin-bottom: 30px;
+}
+
+/* About Box */
 .about-box {
     background: rgba(0, 15, 30, 0.8);
     padding: 30px;
     border-radius: 15px;
     border: 2px solid #00eaff;
     box-shadow: 0 0 20px #00eaff;
-    margin: auto;
 }
 
 .about-box p {
@@ -135,6 +151,7 @@ body {
     text-shadow: 0 0 10px #00eaff;
 }
 
+/* SKILLS LIST */
 .skills-list {
     list-style: none;
     margin-top: 20px;
@@ -145,12 +162,11 @@ body {
     margin: 8px 0;
     color: #a9e9ff;
     text-shadow: 0 0 10px #00eaff;
+
 }
 
-/* PUSH CONTENT DOWN DUE TO FIXED NAVBAR */
-body {
-    padding-top: 70px;
-}
+
+
 
 /* HEADER */
 header {
@@ -159,12 +175,15 @@ header {
     background: #000000d6;
     border: 3px solid #00141f;
     margin: 20px auto;
-    width: 90%;
-    max-width: 550px;
+    width: 550px;
     border-radius: 20px;
-    box-shadow: 0 0 15px #00eaff, 0 0 30px #005eff inset;
+
+    /* neon glow */
+    box-shadow: 0 0 15px #00eaff, 
+                0 0 30px #005eff inset;
 }
 
+/* Genshin-style text */
 header h1 {
     font-family: "Cinzel", serif;
     font-size: 2.7rem;
@@ -177,19 +196,64 @@ header p {
     color: #d4ffff;
 }
 
+/* DARK MODE */
+body.dark-mode {
+    background: #00040b;
+    color: #cfe7ff;
+}
+
+header.dark-mode {
+    background: #000d3d;
+    border-color: #00b3ff;
+    box-shadow: 0 0 15px #00b3ff, 
+                0 0 25px #004477 inset;
+}
+
+/* DARK MODE TOGGLE BUTTON */
+#darkModeToggle {
+    background: #00eaff;
+    color: #00111a;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    /* glowing button */
+    box-shadow: 0 0 10px #00eaff, 0 0 20px #00d4ff;
+    transition: 0.2s;
+}
+
+#darkModeToggle:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px #ffffff;
+}
+
 /* PROJECT SECTION */
 .projects {
     width: 80%;
-    max-width: 1000px;
     margin: 40px auto;
 }
 
+.projects h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.3rem;
+    font-family: "Cinzel", serif;
+    color: #a6faff;
+    text-shadow: 0 0 15px #00eaff;
+}
+
+/* PROJECT CARDS */
 .project-box {
     background: #00141f;
     padding: 20px;
     margin-bottom: 25px;
     border-left: 4px solid #00eaff;
     border-radius: 12px;
+
+   
     box-shadow: 0 0 15px #00baff;
     transition: 0.3s;
 }
@@ -210,49 +274,18 @@ header p {
     color: #d7faff;
 }
 
-/* CONTACT SECTION */
-.contact {
-    margin: 60px auto;
-    text-align: center;
-}
-
-.contact-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 80%;
-    max-width: 800px;
-    margin: auto;
-}
-
-.contact-item {
-    padding: 12px 20px;
-    font-size: 1.2rem;
-    color: #bffcff;
-    text-decoration: none;
-    border: 2px solid #00eaff;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-shadow: 0 0 8px #00eaff;
-    box-shadow: 0 0 10px #00eaff;
-    transition: 0.3s;
-}
-
-.contact-item:hover {
-    background: #00eaff;
-    color: #00121e;
-    box-shadow: 0 0 20px #00eaff, 0 0 35px #00eaff;
-    transform: translateY(-3px);
-}
-
-.contact-item i {
+.about-me {
+    color: #aaf6ff;
+    font-family: "Cinzel", serif;
+    text-shadow: #00eaff;
     font-size: 1.4rem;
+    background-color: #00141f;
+    width:800px;
+    border-radius: 10px;
+    margin: 20px auto;
 }
 
-/* MARQUEE SECTION */
+/* WAIFU CARDS SECTION */
 .waifu-marquee-section {
     width: 100%;
     text-align: center;
@@ -270,7 +303,7 @@ header p {
 .waifu-marquee {
     width: 90%;
     max-width: 1000px;
-    height: 320px;
+    height: 320px;          
     margin: 50px auto;
     border: 2px solid #00eaff;
     border-radius: 15px;
@@ -282,15 +315,15 @@ header p {
 
 .marquee-track {
     display: flex;
-    width: max-content;
+    gap: 20px;
+    width: calc((200px + 20px) * 8); /* 8 cards including duplicates */
     height: 100%;
-    animation: scroll 20s linear infinite;
+    animation: moveRight 20s linear infinite;
 }
 
 .waifu-card {
     width: 200px;
-    height: 100%;
-    margin-right: 20px;
+    height: 100%; 
     border-radius: 12px;
     overflow: hidden;
     flex-shrink: 0;
@@ -310,31 +343,151 @@ header p {
     transform: scale(1.05);
 }
 
-@keyframes scroll {
+/* Smooth infinite scroll */
+@keyframes moveRight {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
-/* RESPONSIVE MOBILE FIXES */
+
+
+
+/* CONTACT SECTION */
+.contact {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    font-family: "Cinzel", serif;
+    color: #bffcff;
+    text-shadow: 0 0 10px #00eaff;
+    margin-bottom: 25px;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    margin: auto;
+}
+
+.contact-item {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    color: #bffcff;
+    text-decoration: none;
+    border: 2px solid #00eaff;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-shadow: 0 0 8px #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+    transition: 0.3s;
+}
+
+/* Neon hover */
+.contact-item:hover {
+    background: #00eaff;
+    color: #00121e;
+    box-shadow: 0 0 20px #00eaff, 0 0 35px #00eaff;
+    transform: translateY(-3px);
+}
+
+.contact-item i {
+    font-size: 1.4rem;
+}
+
+/* MOBILE FIXES */
 @media screen and (max-width: 768px) {
-    .hero-content h1 { font-size: 2rem; line-height: 2.2rem; }
-    .hero-content p { font-size: 1rem; }
-    .hero-btn { padding: 10px 20px; font-size: 0.9rem; }
 
-    .about { width: 95%; margin: 60px auto; }
-    .about-box p, .skills-list li { font-size: 1rem; }
+    /* Navbar stays horizontal but smaller padding */
+    .navbar ul {
+        gap: 20px;
+        flex-wrap: wrap; /* allow wrapping if screen too small */
+        justify-content: center;
+    }
 
-    header { width: 95%; padding: 25px 15px; }
-    header h1 { font-size: 2rem; }
-    header p { font-size: 1rem; }
+    .navbar a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
 
-    .projects { width: 95%; }
-    .project-box { padding: 15px; }
-    .project-box h3 { font-size: 1.2rem; }
+    /* Hero section */
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
 
-    .contact-box { width: 95%; flex-direction: column; gap: 15px; }
+    .hero-content p {
+        font-size: 1rem;
+    }
 
-    .waifu-marquee { width: 95%; height: 220px; }
-    .waifu-card { width: 150px; }
-    .waifu-marquee-title { font-size: 1.8rem; }
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* About box width */
+    .about {
+        width: 95%; /* shrink container */
+        margin: 60px auto;
+    }
+
+    .about-box p, .skills-list li {
+        font-size: 1rem;
+    }
+
+    /* Header */
+    header {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    /* Projects section */
+    .projects {
+        width: 95%;
+    }
+
+    .project-box {
+        padding: 15px;
+    }
+
+    .project-box h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Contact section */
+    .contact-box {
+        width: 95%;
+        flex-direction: column; /* stack contact items vertically */
+        gap: 15px;
+    }
+
+    /* Waifu Marquee */
+    .waifu-marquee {
+        width: 95%;
+        height: 220px; /* shrink height for mobile */
+    }
+
+    .waifu-card {
+        width: 150px; /* shrink cards slightly */
+    }
+
+    .waifu-marquee-title {
+        font-size: 1.8rem;
+    }
 }
