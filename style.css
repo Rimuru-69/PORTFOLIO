@@ -14,8 +14,10 @@ body {
     color: #e6ffff;
     min-height: 100vh;
     transition: background 0.3s, color 0.3s;
-    padding-top: 70px;
     overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
 /* NAVIGATION BAR */
@@ -177,6 +179,7 @@ header {
     margin: 20px auto;
     width: 550px;
     border-radius: 20px;
+    margin-top: 55px;
 
     /* neon glow */
     box-shadow: 0 0 15px #00eaff, 
